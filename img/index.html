@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Online Food Delivery in India.</title>
+    <link rel="Stylesheet" href="css/style.css">
+    <link rel="Stylesheet" media="screen and (max-width:1100px)"href="css/phone.css">
+    <style>
+        /*CSS Reset*/
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        #navbar{
+            flex-direction: column;
+            margin-left: 410px;
+        }
+        #navbar ul li a{
+            font-size: 1rem;
+            padding: 0px 7px;
+        }
+        #home{
+            height: 350px;
+            padding: 3px 68px;
+        }
+        #home p{
+            font-size: 13px;
+            
+        }
+        #home ::before{
+            height: 450px;
+            
+        }
+        .h-primary{
+            font-size: 25px;
+        }
+        #services{
+            flex-direction: column;
+        }
+        
+        #clients{
+            /*overflow: hidden;*/
+            flex-wrap: wrap;
+        }
+        #client img{
+            width: 36px;
+            padding: 2px 6px;
+            height: auto;
+        }
+        .btn{
+            font-size: 13px;
+            padding: 4px 8px;
+        }
+
+       /* body{
+            content: "";
+            background:url(bg-3.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;  
+        }*/
+        /*CSS Variable*/
+        :root{
+            --navbar-height:59px;
+        }
+        /*Navigation Bar*/
+        #navbar{
+            display: flex;
+            align-items: center;
+        }
+        /*Navigation Bar: Logo and Image*/
+        #logo{
+            margin: 10px 15px;
+
+        }
+        #logo img{
+            height: 60px;
+            margin: 3px 5px;
+
+
+        }
+
+        /*Navigation Bar: List styling*/
+        #navbar{
+            position: absolute;
+            top: 0px;
+        }
+        #navbar ::before{
+            content: "";
+            /*background-color: gray;
+            background:url(bg-3.jpg)no-repeat center center/cover;*/
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100px;
+            width: 100px;
+            z-index: -1;
+            /*opacity:0.4;*/
+
+        }
+        #navbar ul{
+            display: flex;
+            font-family: fantasy;
+        }
+       
+
+        #navbar ul li{
+            /*color: white;*/
+            list-style: none;
+            font-size: 1.0rem;
+        }
+        #navbar ul li a{
+            color: black;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        #navbar ul li a:hover{
+            color: red;
+            background-color: white;
+        }
+        /*Home Section*/
+        #home{
+            display: flex;
+            height: 550px;
+            flex-direction: column;
+            padding: 3px 200px;
+            justify-content: center;
+            align-items: center;
+        }
+        #home ::before{
+            content: "";
+            background:url(bg-3.jpg);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 580px;
+            width: 100%;
+            z-index: -1; 
+            
+        }
+        #home h1{
+            color: black;
+            text-align: center;
+            font-family: cursive;
+        }
+        #home p{
+            color: black;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: cursive;
+        }
+        /*Services Center*/
+        #services{
+            margin: 34px;
+            
+            display: flex;
+        }
+        #services .box{
+            border: 2px solid brown;
+            margin: 2px 50px;
+            padding: 32px;
+            border-radius: 8px;
+            background: #f2f2f2;
+            margin-bottom: 20px;
+        }
+        #services .box img{
+            height: 160px;
+            margin: auto;
+            display: block;
+        } 
+        #services .box p{
+            font-family: cursive;
+
+        }
+        
+        /*Clint Section*/
+        #client-section{
+            margin: 2px;
+            height: 340px;
+            position: relative;
+        }
+        #client-section::before{
+            content: " ";
+            position: absolute;
+            background: url(bg-1.jpeg);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.8;
+           
+        }
+        #clients{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2px;
+        }
+        .client-item{
+            padding: 34px;
+        }
+        #clients img{
+            height: 200px;
+        }
+        /*contact section*/
+        #contact{
+            position: relative;
+        }
+        #contact ::before{
+            content: " ";
+            position: absolute;
+            background: url(bg.webp);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        /*Utility Class*/
+        .h-primary{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.8rem;
+            padding: 12px;
+        }
+        .h-secondary{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.2rem;
+            padding: 12px;
+        }
+        .btn{
+            padding: 6px 20px;
+            border: 2px solid black;
+            background-color: brown;
+            color: white;
+            margin: 17px;
+            font-size: 1.3rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .center{
+            text-align: center;
+            padding: 12px;
+        }
+        #contact-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        #contact-box input,
+        #contact-box textarea{
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-family: cursive;
+        }
+        #contact-box form{
+            width: 40%;
+
+        }
+        #contact-box label{
+            font-size: 1.2rem;
+            font-family: cursive;
+        }
+        footer{
+            background: black;
+            color: white;
+            padding: 9px 20px;
+        }
+
+    </style>
+    </head>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo-1.png" alt="MyOnlineMel.com">
+        </div>
+        <ul>
+           <li class="item"><a href="#">Home</a></li>
+           <li class="item"><a href="#">Services</a></li>
+           <li class="item"><a href="#">About us</a></li>
+           <li class="item"><a href="#">Contact us</a></li>
+           <li class="item"><a href="#">Others</a></li>
+
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to MyOnlineMel</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex architecto !</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  ?</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section class="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+            <img src="bg-1.jpeg" alt="">
+            <h2 class="h-secondary center">Food Ordering</h2>
+            <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero distinctio officiis est.</p>
+        </div>
+        <div class="box">
+            <img src="bg-3.jpg" alt="">
+            <h2 class="h-secondary center">Food Catering</h2>
+            <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero distinctio officiis est.</p>
+        </div>
+        <div class="box">
+            <img src="bg-2.jpeg" alt="">
+            <h2 class="h-secondary center">Bulk Ordering</h2>
+            <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero distinctio officiis est.</p>
+        </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="logo-2.png" alt="Our Clients">
+            </div>
+            <div class="client-item">
+                <img src="logo-3.png" alt="Our Clients">
+            </div>
+            <div class="client-item">
+                <img src="logo-4.png" alt="Our Clients">
+            </div>
+            <div class="client-item">
+                <img src="logo-5.jpeg" alt="Our Clients">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email: </label>
+                    <input type="text" name="Email" id="Email" placeholder="Enter your Emaik">
+                </div>
+                <div class="form-group">
+                    <label for="name">Phone No.: </label>
+                    <input type="text" name="Phone No." id="Phone No." placeholder="Enter your Phone No.">
+                </div>
+                <div class="form-group">
+                    <label for="name">Feed Back: </label>
+                    <input type="text" name="Feedback" id="Feedback" placeholder="Please give us feedback..">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                   <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            copyright &copy;www.MyOnlineMel.com. All rights reserved!!
+        </div>
+    </footer>
+</body>
+</html>
